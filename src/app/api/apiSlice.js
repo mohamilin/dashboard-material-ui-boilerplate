@@ -4,7 +4,7 @@ import { setCredentials, logout } from '../../features/auth/authSlice'
 
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:8000',
+    baseUrl: process.env.BASE_URL_API,
     // credentials: 'true',
     prepareHeaders: (headers, {getState}) => {
         let token = getState().auth.token;
