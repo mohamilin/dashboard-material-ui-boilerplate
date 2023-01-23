@@ -7,13 +7,12 @@ import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import Badge from "@mui/material/Badge";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import Sidebar from "./Sidebar";
 import useWindowSize from "../utlis/windowDimension";
+import AccountMenu from "../parts/AccountMenu";
 
 const drawerWidth = 290;
 const AppBar = styled(MuiAppBar, {
@@ -105,13 +104,14 @@ export default function NavigationBar() {
             noWrap
             sx={{ flexGrow: 1 }}
           >
-            Dashboard
+            Dashboards
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+          {/* <IconButton color="inherit">
+            <Badge badgeContent={14} color="secondary">
               <NotificationsIcon />
             </Badge>
-          </IconButton>
+          </IconButton> */}
+          <AccountMenu />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

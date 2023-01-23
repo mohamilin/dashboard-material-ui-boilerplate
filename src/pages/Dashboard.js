@@ -1,8 +1,19 @@
 import React from 'react'
-import Layout from '../layout/Layout'
 import { Grid, Paper } from '@mui/material'
+import { useSelector } from 'react-redux'
+import {selectCurrentToken} from '../features/auth/authSlice';
+
+import Layout from '../layout/Layout'
+import { Link } from 'react-router-dom';
+
+
 
 export default function Dashboard() {
+  const token = useSelector(selectCurrentToken)
+
+
+  const isToken = `${token?.slice(0, 9)}...`
+
   return (
     <Layout>
         {/* Chart */}
@@ -14,6 +25,12 @@ export default function Dashboard() {
               flexDirection: "column",
             }}
           >
+
+            <p>{isToken}</p>
+
+            <p><Link to="/general/users">Go to the Users List</Link></p>
+
+
             <p>
               orem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

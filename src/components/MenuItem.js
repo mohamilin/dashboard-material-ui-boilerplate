@@ -8,7 +8,7 @@ export const menuItem = [
   {
     icon: <HomeRoundedIcon />,
     title: "Dashboard",
-    href:'/',
+    href:'/dashboard',
     items: []
   },
   {
@@ -21,16 +21,22 @@ export const menuItem = [
       },
       {
         title: "Kelas",
-        href: '/kelas',
+        href: '/general/kelas',
         items: []
       },
       {
         title: "Kelas Pararel",
-        href: '/kelas-pararel',
+        href: '/general/kelas-pararel',
         items: []
       },
       {
         title: "Wali Kelas",
+        href: '/general/wali-kelas',
+        items: []
+      },
+      {
+        title: "Data Users",
+        href: '/general/users',
         items: []
       }
     ]
@@ -111,6 +117,7 @@ export const menuItem = [
   },
   {
     icon: <DescriptionOutlinedIcon />,
+    href: '/blog',
     title: "Blog"
   }
 ];
